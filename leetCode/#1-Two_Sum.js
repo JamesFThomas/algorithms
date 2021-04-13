@@ -39,7 +39,7 @@ var twoSum = function(nums, target) {
   for(var i = 0; i < nums.length; i++){
 
     for(var j = 1; j < nums.length; j++){
-      
+
       // evaluate sum of each pair of value, and current indexes
       if(nums[i] + nums[j] === target && i !== j){
 
