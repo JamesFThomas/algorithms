@@ -29,52 +29,31 @@ Constraints:
 
  */
 
-
-
-const reversed = (num)=> {
-
+const reversed = (num) => {
   //check if number is 0
-  if(num === 0){
-
+  if (num === 0) {
     // if zero return 0
     return 0;
-
-  }
-
-  else{
-
+  } else {
     // if input not zero break number into array values
     let numbers = num.toString().split('');
 
     //check first index
-    if(numbers[0] === '-'){
-
+    if (numbers[0] === '-') {
       // remove negative sign from front
-      numbers.shift()
+      numbers.shift();
 
       // reverse, change sign, change back to number
-      numbers = Number(numbers.reverse().join('')) *-1
+      numbers = Number(numbers.reverse().join('')) * -1;
 
       // check if reversed number is in interger range
       return numbers <= -2147483648 ? 0 : numbers;
-
-    }
-
-    else{
-
+    } else {
       // reverse, change back to number
       numbers = Number(num.toString().split('').reverse().join(''));
 
       // check if reversed number is in interger range
       return numbers >= 2147483648 ? 0 : numbers;
-
     }
-
   }
-
-}
-
-
-
-
-
+};

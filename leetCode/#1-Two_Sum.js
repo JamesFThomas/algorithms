@@ -26,23 +26,18 @@ Constraints:
 Only one valid answer exists.
 */
 
-var twoSum = function(nums, target) {
-
+var twoSum = function (nums, target) {
   //array lit to hold number indexes when found
   let indexes = [];
 
   //boolean flag to indicate if values have been found
   let notFound = false;
 
-
   // Create nested loops to evaluate sum of each combination of values in nums array
-  for(var i = 0; i < nums.length; i++){
-
-    for(var j = 1; j < nums.length; j++){
-
+  for (var i = 0; i < nums.length; i++) {
+    for (var j = 1; j < nums.length; j++) {
       // evaluate sum of each pair of value, and current indexes
-      if(nums[i] + nums[j] === target && i !== j){
-
+      if (nums[i] + nums[j] === target && i !== j) {
         // if values sum === target, push index of current values to indexes array
         indexes[0] = i;
         indexes[1] = j;
@@ -52,20 +47,13 @@ var twoSum = function(nums, target) {
 
         //return indexes array
         return indexes;
-
       }
 
       // evaluate boolean flag
-      if (!notFound){
-
+      if (!notFound) {
         //if boolean flag still false continue evaluating sums
         continue;
-
       }
-
-            } //inner for loop end
-
-      } //outter for loop end
-
-
+    } //inner for loop end
+  } //outter for loop end
 };
